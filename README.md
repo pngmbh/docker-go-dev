@@ -1,8 +1,3 @@
-# deis/go-dev
-
-[![Build Status](https://travis-ci.org/deis/docker-go-dev.svg?branch=master)](https://travis-ci.org/deis/docker-go-dev) [![Docker Repository on Quay](https://quay.io/repository/deis/go-dev/status "Docker Repository on Quay")](https://quay.io/repository/deis/go-dev)
-
-A [Go][] language development toolbox.
 
 Many [Deis Workflow][] components use this Docker image as a standard build and test environment,
 but it is intended to be useful to any Go developer. Please help make deis/go-dev better by
