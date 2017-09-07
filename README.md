@@ -47,20 +47,20 @@ The latest deis/go-dev Docker image is available at:
 [az]: https://github.com/Azure/azure-cli#readme
 [Deis Workflow]: https://deis.com/
 [Docker Hub]: https://hub.docker.com
-[gen-changelog.sh]: https://github.com/deis/docker-go-dev/tree/master/rootfs/usr/local/bin/gen-changelog.sh
+[gen-changelog.sh]: https://github.com/deisthree/docker-go-dev/tree/master/rootfs/usr/local/bin/gen-changelog.sh
 [ginkgo]: https://github.com/onsi/ginkgo
 [glide]: https://github.com/Masterminds/glide
 [Go]: https://golang.org/
 [golint]: https://github.com/golang/lint
 [gox]: https://github.com/mitchellh/gox
 [helm]: https://github.com/kubernetes/helm
-[issues]: https://github.com/deis/docker-go-dev/issues
+[issues]: https://github.com/deisthree/docker-go-dev/issues
 [jq]: https://stedolan.github.io/jq/
 [kubectl]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [official go Docker image]: https://hub.docker.com/_/golang/
-[pull requests]: https://github.com/deis/docker-go-dev/pulls
+[pull requests]: https://github.com/deisthree/docker-go-dev/pulls
 [Quay.io]: https://quay.io
 [shellcheck]: https://github.com/koalaman/shellcheck
-[test-cover.sh]: https://github.com/deis/docker-go-dev/tree/master/rootfs/usr/local/bin/test-cover.sh
+[test-cover.sh]: https://github.com/deisthree/docker-go-dev/tree/master/rootfs/usr/local/bin/test-cover.sh
 [upx]: http://upx.sourceforge.net/
 [Docker]: http://www.docker.com
