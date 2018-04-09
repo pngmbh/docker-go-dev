@@ -1,11 +1,11 @@
 FROM quay.io/deis/base:v0.3.6
 
-ENV AZCLI_VERSION=2.0.14 \
-    GO_VERSION=1.9.1 \
-    GLIDE_VERSION=v0.13.0 \
+ENV AZCLI_VERSION=2.0.30 \
+    GO_VERSION=1.10.1 \
+    GLIDE_VERSION=v0.13.1 \
     GLIDE_HOME=/root \
     HELM_VERSION=v2.6.0 \
-    KUBECTL_VERSION=v1.8.0 \
+    KUBECTL_VERSION=v1.9.6 \
     SHELLCHECK_VERSION=v0.4.6 \
     PATH=$PATH:/usr/local/go/bin:/go/bin:/usr/local/bin/docker \
     GOPATH=/go
@@ -25,8 +25,11 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   python-setuptools \
   unzip \
   upx \
+  wget \
   zip \
   openssh-client \
+  rsync \
+  vim \
   --no-install-recommends \
   && rm -rf /var/lib/apt/lists/* \
   && curl -L https://storage.googleapis.com/golang/go$GO_VERSION.linux-amd64.tar.gz | tar -C /usr/local -xz \
@@ -43,6 +46,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   && chmod +x /usr/local/bin/kubectl \
   && curl -sSL https://storage.googleapis.com/kubernetes-helm/helm-$HELM_VERSION-linux-amd64.tar.gz \
     | tar -vxz -C /usr/local/bin --strip=1 \
+  && mkdir -p /go/bin \
+  && curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh \
   && apt-get purge -y --auto-remove \
     unzip \
   && apt-get autoremove -y \
@@ -54,15 +59,18 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   && rm docker-17.05.0-ce.tgz \
   && go get -u -v \
   github.com/alecthomas/gometalinter \
+  gopkg.in/alecthomas/gometalinter.v2 \
   github.com/onsi/ginkgo/ginkgo \
   github.com/mitchellh/gox \
   github.com/golang/protobuf/protoc-gen-go \
-  github.com/golang/dep/cmd/dep \
   github.com/haya14busa/goverage \
   github.com/constabulary/gb/... \
   github.com/dgrijalva/jwt-go/cmd/jwt \
+  github.com/axw/gocov/gocov \
+  github.com/AlekSi/gocov-xml \
   && gometalinter --install \
-  && pip install --disable-pip-version-check --no-cache-dir azure-cli==${AZCLI_VERSION} \
+  && gometalinter.v2 --install \
+  && pip install --disable-pip-version-check --no-cache-dir azure-cli==${AZCLI_VERSION} shyaml \
   && apt-get purge --auto-remove -y libffi-dev python-dev python-pip
 
 WORKDIR /go

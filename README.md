@@ -6,18 +6,23 @@ creating [issues][] and submitting [pull requests][].
 ## Image Contents
 
 * based on the [official go Docker image][]
+* [dep][]: go dependency management tool
+* [gb][]: project-based build tool for go
 * [ginkgo][]: BDD testing framework for go
-* [glide][]: go dependency management
+* [glide][]: go dependency management tool
 * [golint][]: go source code linter
 * [gox][]: simple go cross-compiling tool
 * [helm][]: Kubernetes package manager
 * [jq][]: command-line JSON processor
+* [jwt][]: tool for creating and parsing JSON Web Tokens
 * [kubectl][]: Kubernetes command-line client
 * [shellcheck][]: static analysis for shell scripts
+* [shyaml][]: YAML access from the command line
 * [test-cover.sh][]: test coverage for multiple go packages
 * [upx][]: executable packer
 * [az][]: Azure cloud command-line tool
 * [Docker][]: Docker binaries to be able to bind mount /var/run/docker.sock in the dev environment container
+* [vim][]: text editor
 
 ## Usage
 
@@ -46,8 +51,10 @@ The latest deis/go-dev Docker image is available at:
 
 [az]: https://github.com/Azure/azure-cli#readme
 [Deis Workflow]: https://deis.com/
+[dep]: https://github.com/golang/dep
 [Docker Hub]: https://hub.docker.com
 [gen-changelog.sh]: https://github.com/teamhephy/docker-go-dev/tree/master/rootfs/usr/local/bin/gen-changelog.sh
+[gb]: https://github.com/constabulary/gb/
 [ginkgo]: https://github.com/onsi/ginkgo
 [glide]: https://github.com/Masterminds/glide
 [Go]: https://golang.org/
@@ -56,11 +63,14 @@ The latest deis/go-dev Docker image is available at:
 [helm]: https://github.com/kubernetes/helm
 [issues]: https://github.com/teamhephy/docker-go-dev/issues
 [jq]: https://stedolan.github.io/jq/
+[jwt]: https://github.com/dgrijalva/jwt-go
 [kubectl]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [official go Docker image]: https://hub.docker.com/_/golang/
 [pull requests]: https://github.com/teamhephy/docker-go-dev/pulls
 [Quay.io]: https://quay.io
 [shellcheck]: https://github.com/koalaman/shellcheck
 [test-cover.sh]: https://github.com/teamhephy/docker-go-dev/tree/master/rootfs/usr/local/bin/test-cover.sh
+[shyaml]: https://github.com/0k/shyaml
 [upx]: http://upx.sourceforge.net/
 [Docker]: http://www.docker.com
+[vim]: http://www.vim.org/
