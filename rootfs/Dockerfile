@@ -53,7 +53,7 @@ RUN \
   && curl -L https://deisbuildartifacts.blob.core.windows.net/shellcheck/shellcheck-${SHELLCHECK_VERSION}-linux-amd64 -o /usr/local/bin/shellcheck \
   && chmod +x /usr/local/bin/shellcheck \
   && curl -L https://storage.googleapis.com/k8s-claimer/git-e4dcc16/k8s-claimer-git-e4dcc16-linux-amd64 -o /usr/local/bin/k8s-claimer \
-	&& chmod +x /usr/local/bin/k8s-claimer \
+  && chmod +x /usr/local/bin/k8s-claimer \
   && curl -sSL -o /tmp/protoc.zip https://github.com/google/protobuf/releases/download/v3.1.0/protoc-3.1.0-linux-x86_64.zip \
   && unzip /tmp/protoc.zip 'bin/protoc' -d /usr/local \
   && rm /tmp/protoc.zip \
